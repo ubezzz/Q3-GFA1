@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+        var nickname = "Jovie";
+        var height = 59; 
+        var weight = 43; 
+
+        var feet = Math.floor(height / 12);
+        var inches = height % 12;
+
+        var pounds = weight * 2.20462;
+
+        alert("Name: " + nickname + "\nHeight: " + feet + "’" + inches + "\nWeight: " + pounds + " lbs");
+
+        var share = confirm("Do you agree to share your personal information with our site?");
+
+        if (share) {
+            console.log("Name: " + nickname);
+            console.log("Height: " + feet + "’" + inches);
+            console.log("Weight: " + pounds + " lbs");
+        } else {
+            console.log("User does not wish to share his/her information.");
+        }
+
+        var firstN = prompt("Input first name: ");
+        var lastN = prompt("Input last name: ");
+        var birthY = prompt("Input birth year: ")
+
+        var currentY = new Date().getFullYear();
+        var age = currentY - birthY;
+
+        var outputT= "Hello " + firstN + " " + lastN + "! How does it feel to be " + age + " years old?";
+
+        document.getElementById('output').innerHTML = outputT;
+  
+    </script>
+
+</body>
+</html>
